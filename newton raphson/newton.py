@@ -1,22 +1,15 @@
-# Python program to find the roots by False Position Method
-
-print("NEWTON RAHPSON METHOD\n")
-
-print("f(x) = x**3 - 5*x + 1\n")
-
-# -----------------------------------------------------------------------
-
-                        # finding Values of f(x) and f'(x)
-
-# main f(x) finding
+import sympy as sp
 
 def maineqx(x):
-    return x*x*x - 5*x + 1
+    # User-defined function
+    return x**3 - 5*x + 1
 
-# Slotion of f'(x)
-
-def solv_defeqx(x):
-    return 3*x*x - 5
+# Symbolically calculate the derivative
+x = sp.symbols('x')
+maineqx_sym = maineqx(x)
+derivative_sym = sp.diff(maineqx_sym, x)
+# Convert the symbolic derivative to a Python function
+derivative_func = sp.lambdify(x, derivative_sym, 'numpy')
 
 # -----------------------------------------------------------------------
 
@@ -70,7 +63,7 @@ def newton(c):
     print("\nSo the f(c) = " + str(c_value))
     
     # finding f'(c)
-    c_devalue = solv_defeqx(c)
+    c_devalue = derivative_func(c)
     print("\nSo the value of f'(c) = " + str(c_devalue))
     
     # Step 3
@@ -95,10 +88,10 @@ for i in range(1, n+1):
     print("\nItration Number:" + str(i) + "\n")
     print("-------------------------------------")
     c = newton(c)
-    # myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
-    # if (myexit == 1):
-    #     print("\nSo the final root for this funtion is " + str(c) + " at Itration no. " + str(i))
-    #     exit()
+    myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
+    if (myexit == 1):
+        print("\nSo the final root for this funtion is " + str(c) + " at Itration no. " + str(i))
+        exit()
     print("-------------------------------------")
     
 print("\nSo the final root for this funtion is " + str(c) + " at Itration no. " + str(i))
