@@ -1,3 +1,4 @@
+import math
 # Python program to find the roots by Itrative / Bisection method
 
 print("BISECTION METHOD\n")
@@ -5,7 +6,7 @@ print("BISECTION METHOD\n")
 # Making equtaion
 
 def maineqx(x):
-    return -0.5*x*x + 2.5*x + 4.5
+    return x - math.exp(x)
 
 # Asking user to assing the range
 
