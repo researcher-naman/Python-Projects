@@ -2,7 +2,7 @@ import sympy as sp
 
 def maineqx(x):
     # User-defined function
-    return x**3 - 5*x + 1
+    return 6*(x**2) - 42*x + 36
 
 # Symbolically calculate the derivative
 x = sp.symbols('x')
