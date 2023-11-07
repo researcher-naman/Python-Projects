@@ -2,7 +2,7 @@ import sympy as sp
 
 def maineqx(x):
     # User-defined function
-    return 6*(x**2) - 42*x + 36
+    return x**3 - 3*x + 1
 
 # Symbolically calculate the derivative
 x = sp.symbols('x')
@@ -46,7 +46,7 @@ if (maineqx(a)*maineqx(b)>0):
 else:
     print("\n")
 
-n = int(input("Enter the Itration you have to find : ")) # Asking user how many time itration is to be done
+n = int(input("Enter the Iteration you have to find : ")) # Asking user how many time Iteration is to be done
     
 def step1(a,b):
     # Step 1st
@@ -85,14 +85,14 @@ def newton(c):
         return c
 
 for i in range(1, n+1):
-    print("\nItration Number:" + str(i) + "\n")
+    print("\nIteration Number:" + str(i) + "\n")
     print("-------------------------------------")
     c = newton(c)
-    myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
+    myexit = int(input("Enter 1 for exit and 0 for next Iteration: "))
     if (myexit == 1):
-        print("\nSo the final root for this funtion is " + str(c) + " at Itration no. " + str(i))
+        print("\nSo the final root for this function is " + str(c) + " at Iteration no. " + str(i))
         exit()
     print("-------------------------------------")
     
-print("\nSo the final root for this funtion is " + str(c) + " at Itration no. " + str(i))
+print("\nSo the final root for this function is " + str(c) + " at Iteration no. " + str(i))
         

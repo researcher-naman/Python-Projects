@@ -6,7 +6,7 @@ print("BISECTION METHOD\n")
 # Making equtaion
 
 def maineqx(x):
-    return 28*x**2 - 14*x + 7
+    return 2*x**3 - 2*x - 5
 
 # Asking user to assing the range
 
@@ -42,7 +42,7 @@ if (maineqx(a)*maineqx(b)>0):
 else:
     print("\n")
 
-n = int(input("Enter the Itration you have to find : ")) # Asking user how many time itration is to be done
+n = int(input("Enter the Iteration you have to find : ")) # Asking user how many time iteration is to be done
 
 def bisection(a,b):
     # Step 1st
@@ -70,13 +70,13 @@ def bisection(a,b):
     return (a,b)
 
 for i in range(1, n+1):
-    print("\nItration Number:" + str(i) + "\n")
+    print("\nIteration Number:" + str(i) + "\n")
     print("-------------------------------------")
     a,b = bisection(a,b)
-    # myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
-    # if (myexit == 1):
-    #     print("\nSo the final root for this funtion is " + str(a) + " or " + str(b) + " at Itration no. " + str(i))
-    #     exit()
+    myexit = int(input("Enter 1 for exit and 0 for next Iteration: "))
+    if (myexit == 1):
+        print("\nSo the final root for this function is " + str(a) + " or " + str(b) + " at Iteration no. " + str(i))
+        exit()
     print("-------------------------------------")
     
-print("\nSo the final root for this funtion is " + str(a) + " or " + str(b) + " at Itration no. " + str(i))
+print("\nSo the final root for this function is " + str(a) + " or " + str(b) + " at Iteration no. " + str(i))

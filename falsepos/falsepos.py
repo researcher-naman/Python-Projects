@@ -41,7 +41,7 @@ if (maineqx(a)*maineqx(b)>0):
 else:
     print("\n")
 
-n = int(input("Enter the Itration you have to find : ")) # Asking user how many time itration is to be done
+n = int(input("Enter the Iteration you have to find : ")) # Asking user how many time Iteration is to be done
     
     
 def false_pos(a,b):
@@ -88,15 +88,15 @@ def false_pos(a,b):
     return (a,b)
 
 for i in range(1, n+1):
-    print("\nItration Number:" + str(i) + "\n")
+    print("\nIteration Number:" + str(i) + "\n")
     print("-------------------------------------")
     a,b = false_pos(a,b)
-    myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
+    myexit = int(input("Enter 1 for exit and 0 for next Iteration: "))
     if (myexit == 1):
-        print("\nSo the final root for this funtion is " + str(a) + " or " + str(b) + " at Itration no. " + str(i))
+        print("\nSo the final root for this function is " + str(a) + " or " + str(b) + " at Iteration no. " + str(i))
         exit()
     print("-------------------------------------")
     
-print("\nSo the final root for this funtion is " + str(a) + " or " + str(b) + " at Itration no. " + str(i))
+print("\nSo the final root for this function is " + str(a) + " or " + str(b) + " at Iteration no. " + str(i))
     
     
