@@ -32,11 +32,14 @@ def gauss_elimination(A, b):
 
     return x
 
-# Example 5usage:
-A = [[1, 1, 1],
-     [1, 4, 3],
-     [1, 6, 2]]
-b = [4, 8, 6]
+print("Enter the element one by one by pressing enter in row format.\n")
+
+print("For Matrix A\n")
+A = [[float(input("Enter the element :")) for _ in range(3)] for _ in range(3)]
+
+# Get user input for vector b
+print("For Matrix b\n")
+b = [float(input()) for _ in range(3)]
 
 roots = gauss_elimination(A, b)
 print("Roots:", roots)
